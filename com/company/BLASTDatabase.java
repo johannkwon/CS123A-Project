@@ -22,11 +22,14 @@ public class BLASTDatabase extends ArrayList<BLASTSubject> {
 
         String[] Values = new String[9];
 
-        BLASTSubject CurrentSubject = new BLASTSubject();
+        
 
         String current = br.readLine();
 
+        // Fills in the BLASTSubject attributes
         while(true) {
+            BLASTSubject CurrentSubject = new BLASTSubject();
+            
             current = br.readLine();
 
             if (current == null) {
@@ -53,6 +56,8 @@ public class BLASTDatabase extends ArrayList<BLASTSubject> {
 
             this.add(CurrentSubject);
         }
+
+        br.close();
 
     }
 }

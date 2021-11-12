@@ -1,4 +1,8 @@
+// CREDIT TO DR. PHILIP HELLER FOR PROVIDING US WITH THIS CODE
+// lines getNucleotideGPPage() were commented out due to error with throwing a new ConversionException
+
 package com.company;
+
 import java.net.*;
 import java.io.*;
 import java.util.*;
@@ -48,11 +52,11 @@ public class NucleotidePageFetch
 		// Use eUtils to retrieve .gp page. 1st response page is XML. Retrieve 1st ID in <ID> tag.
 		NucleotidePageFetch client = forInitiateGPLookup(accessionOrGI);
 		String eutilsInitialResponse = client.getResponsePageAsString();
-		if (eutilsInitialResponse == null)
-			throw new ConversionException(ConversionFailure.PROTEIN_GP_PAGE_NO_INITIAL_RESPONSE);
+		//if (eutilsInitialResponse == null)
+		//	throw new ConversionException(ConversionFailure.PROTEIN_GP_PAGE_NO_INITIAL_RESPONSE);
 		int index = eutilsInitialResponse.indexOf("<Id>");
-		if (index < 0)
-			throw new ConversionException(ConversionFailure.PROTEIN_GP_PAGE_NO_ID_TAG_IN_INITIAL_RESPONSE);
+		//if (index < 0)
+		//	throw new ConversionException(ConversionFailure.PROTEIN_GP_PAGE_NO_ID_TAG_IN_INITIAL_RESPONSE);
 		index += "<Id>".length();
 		eutilsInitialResponse = eutilsInitialResponse.substring(index);
 		String euID = "";
@@ -64,8 +68,8 @@ public class NucleotidePageFetch
 		// the nucleotide accession #, range, and strand that we need.
 		client = forRetrieveGPFromEntrez(euID);
 		String gpPage = client.getResponsePageAsString();
-		if (gpPage == null)
-			throw new ConversionException(ConversionFailure.PROTEIN_GP_PAGE_NO_GP_PAGE);
+		//if (gpPage == null)
+		//	throw new ConversionException(ConversionFailure.PROTEIN_GP_PAGE_NO_GP_PAGE);
 		return gpPage;
 	}
 		
