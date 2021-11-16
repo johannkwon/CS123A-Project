@@ -1,6 +1,7 @@
 # RedwoodProject
 
 Credit to Dr. Philip Heller for providing us with NucleotidePageFetch.java* for grabbing nucleotide pages from Entrez databases.
+
 Due to some complications with GitHub, Johann Kwon mainly pushed files so changes made by Rajiv Iyengar are not tracked.
 Rajiv worked on BLASTDatabase.java, BLASTSubject.java, DatabaseOutput.java, and the main.
 
