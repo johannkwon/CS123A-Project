@@ -1,5 +1,5 @@
 // CREDIT TO DR. PHILIP HELLER FOR PROVIDING US WITH THIS CODE
-// lines getNucleotideGPPage() were commented out due to error with throwing a new ConversionException
+// ConversionException catching lines in getNucleotideGPPage() were commented out due to error with throwing a new ConversionException
 
 package com.company;
 

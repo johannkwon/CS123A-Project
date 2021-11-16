@@ -4,17 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-
-import static java.lang.Float.parseFloat;
-import static java.lang.Integer.parseInt;
 
 public class BLASTDatabase extends ArrayList<BLASTSubject> {
 
-    public BLASTDatabase() {
-
-    }
+    public BLASTDatabase() {}
 
     public void FillDatabase(String filename) throws IOException {
         FileReader fr = new FileReader(filename);
@@ -58,6 +51,5 @@ public class BLASTDatabase extends ArrayList<BLASTSubject> {
         }
 
         br.close();
-
     }
 }
